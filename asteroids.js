@@ -1,3 +1,9 @@
+// ==ClosureCompiler==
+// @output_file_name default.js
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// @js_externs window.ASTEROIDS; window.ASTEROIDSPLAYERS
+// ==/ClosureCompiler==
+
 (function() {
 function Asteroids() {
 	if ( ! window.ASTEROIDS )
@@ -1108,7 +1114,7 @@ if ( window.ActiveXObject && ! document.createElement('canvas').getContext ) {
 				window.ASTEROIDSPLAYERS[window.ASTEROIDSPLAYERS.length] = new Asteroids();
 		}
 	};
-	script.src = "http://erkie.github.com/excanvas.js";
+	script.src = "./excanvas.js";
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
 else window.ASTEROIDSPLAYERS[window.ASTEROIDSPLAYERS.length] = new Asteroids();
